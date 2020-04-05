@@ -5,10 +5,10 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
-// import Home from "./pages/Home";
-// import Chat from "./pages/Chat";
+import Home from "./pages/Home";
+import Chat from "./pages/Chat";
 import Signup from "./pages/Signup";
-// import Login from "./pages/Login";
+import Login from "./pages/Login";
 import { auth } from "./services/firebase";
 import './styles.css';
 
@@ -77,22 +77,22 @@ class App extends Component {
     ) : (
         <Router>
           <Switch>
-            {/* <Route exact path="/" component={Home} /> */}
-            {/* <PrivateRoute
+            <Route exact path="/" component={Home} />
+            <PrivateRoute
               path="/chat"
               authenticated={this.state.authenticated}
               component={Chat}
-            /> */}
+            />
             <PublicRoute
               path="/signup"
               authenticated={this.state.authenticated}
               component={Signup}
             />
-            {/* <PublicRoute
+            <PublicRoute
               path="/login"
               authenticated={this.state.authenticated}
               component={Login}
-            /> */}
+            />
           </Switch>
         </Router>
       );
